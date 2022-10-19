@@ -1,0 +1,318 @@
+    <!-- Doctype, Headers                       #region [ rgba(200, 200, 200, 0.1) ]  -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8" />
+            <title>Starship</title>
+            <link rel="stylesheet" href="./style.css" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=space+mono">
+        </head>
+        <body>
+        <!-- #endregion -->
+    <!-- Starfield Canvas                       #region [ rgba(200, 200, 200, 0.1) ]  -->
+
+        <div class="canvas-container fixed-top js-container" id="starfield">
+            <canvas class="100 canvas-container__canvas js-canvas">
+                Starfield Canvas
+            </canvas>
+        </div>
+
+        <!-- #endregion -->
+    
+<!-- TEMPLATES 
+        CONTENT SPACER: 
+                <div class = "contentspacer" style = "height:50vh">  </div>     
+        
+        FLOAT TEXT - ID = THINGY
+                <div class = "paneltextdiv"> <p class = "paneltext" id="THINGY"></p> </div>
+                {add text in textarray below as thingy:"text"}
+        FLOAT IMAGE: ID = THINGY 
+                <div> <img class="panel"     src="image/THINGY.png" /> </div>
+-->
+
+    <!-- PAGE CONTENT                           #region [ rgba(200, 100, 255, 0.1) ] -->
+        
+    
+        <div class="contentcontainer">                   
+            <!-- Intro Scrolling Ship -->
+                <div class="contentcontainer" style="height:150vh">
+                    <div id = "introdiv" class="contentcontainer" style="width:100px; position:absolute; top:60vh; left:20vw">
+                        <img src="image/heroship.png" style="object-fit:contain; width:100%"/>
+                        <div id = "introtext" class = "introtext" 
+                        style=" color:white;
+                                font-family: 'Space Mono', monospace;
+                                text-align:right;
+                                position:relative;
+                                font-size:1em">
+                        </div>
+                    </div>
+                </div>
+            <!-- Lg Ship Image  -->
+                <div> <img class="panel"     src="image/shiplg.png" /> </div>
+            <!-- ######### --> 
+                <div class = "contentspacer" style = "height:50vh">  </div>    
+            <!-- atPC      -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="atPC"></p> </div>
+                <div> <img class="panel"     src="image/atPC.png" /> </div>
+                <div class = "contentspacer" style = "height:80vh">  </div>
+            <!-- etron      -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="etron"></p> </div>
+                <div> <img class="panel"     src="image/etron.png" /> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+            <!-- messenger -->
+                <div id = "messengerdiv"> 
+                    <div class = "paneltextdiv" style="min-height: 10vh;"> <p class = "paneltext" id="messenger" style="height: 10vh;"></p> </div>
+                    <div id = "messengerbox" style="position:relative; height:60vh; width:40.73vh; margin:auto;">
+                        <img src = "image/messenger.png" style="position:absolute; left:0; height:100%; width:100%" />
+                        <img id = "mb1" src="image/messenger-1.png" style="height:15%; max-width:40vh;object-fit:contain;position: absolute; top: 20%; right:5%">
+                        <img id = "mb2" src="image/messenger-2.png" style="height:20%; max-width:40vh;object-fit:contain;position: absolute; top: 35%; left:5%; right:95%">
+                        <img id = "mb3" src="image/messenger-3.png" style="height:15%; max-width:40vh;object-fit:contain;position: absolute; top: 55%; right:5%">
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+
+             <!-- outofroll 1&2      -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="outofroll"></p> </div>
+                <div class = "contentspacer" style = "height:50vh">  </div>
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="conservewaste"></p> </div>
+                <div> <img class="panel"     src="image/conservewaste.png" /> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>   
+            <!-- insta      -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="insta"></p> </div>
+                <div> <img class="panel"     src="image/instabody.png" /> </div>
+                <div class = "paneltextdiv"> <p class = "paneltext" id="insta2"></p> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+            <!-- chess      -->
+                <div class = "paneltextdiv"> <p class = "paneltext" id="chess"></p> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+                <div> <img class="panel"     src="image/chess.png" /> </div>
+                <div class = "paneltextdiv"> <p class = "paneltext" id="chess2"></p> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+            <!-- clap clap&echo -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="clapclap"></p> </div>
+                <div> <img class="panel"     src="image/clapclap.png" /> </div>
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="clapecho"></p> </div>
+                <div> <img class="panel"     src="image/clapecho.png" /> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+            <!-- quiz -->
+                <div class = "paneltextdiv"> <p class = "paneltext low" id="quiz"></p> </div>
+                <div> <img class="panel"     src="image/quiz.png" /> </div>   
+                <div class = "paneltextdiv"> <p class = "paneltext" id="quiz2"></p> </div> 
+                <div class = "contentspacer" style = "height:70vh">  </div>
+                <div> <img class="panel"     src="image/trimup.png" /> </div>
+                <div class = "contentspacer" style = "height:200vh">  </div>
+            <!-- one with the ship -->
+                <div> <img class="panel"     src="image/bounce.png" /> </div>   
+                <div class = "paneltextdiv"> <p class = "paneltext" id="onewiththeship"></p> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div> 
+            <!-- barratt -->
+                <div class = "paneltextdiv"> <p class = "paneltext" id="barratt"></p> </div> 
+                <div class = "contentspacer" style = "height:100vh">  </div>
+            <!-- the light -->
+                <div class = "paneltextdiv"> <p class = "paneltext" id="thelight"></p> </div>
+                <div class = "contentspacer" style = "height:100vh">  </div>
+                <div class = "paneltextdiv"> <p class = "paneltext" id="thelight2"></p> </div>
+                <div class = "paneltextdiv"> <p class = "paneltext" id="thelight3" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"></p> </div> 
+            <!-- ######## -->
+                <div class = "contentspacer" style = "height:200vh">  </div>
+            <!-- end (pilot message) -->
+                <div class = "paneltextdiv"> <p class = "paneltext" id="end"></p> </div> 
+
+       </div>
+       
+
+        <!-- #endregion -->
+
+
+    <!-- Script Loading -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="./js/starfield.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+<!------------------------->
+
+
+<!-- PAGE SCRIPTING                             #region [ rgba(0, 200, 0, 0.1) ] -->
+    
+    
+    <script>
+        
+    // ======= TEXT CONTENT 
+
+        var textarray =  
+        {
+            atPC: 
+                `<b>Day 190.</b>
+                Still no sight of land, in any direction. <br>            
+                210 solar systems in this galaxy. <br> 412 galaxies in this cluster. <br> 
+                There's just so...    <i>much</i>. `
+            ,
+            etron:
+                `I've watched all 329,872,164 shows on the Entertainotron ©.
+                So I've started making my own. Rather fun.` 
+            ,
+            outofroll:
+                `<b>Day 256.</b>
+                 Out of loo roll, <br> which means it's recycling time.
+                 It takes a full day to pulp, dry and rolling pin it out to 0.2-ply. <br> <br>
+                 It's something to do. `
+            ,
+            conservewaste:
+                `<b>Day 256.</b>
+                 Loo paper replaced successfully. `
+            ,
+            insta:
+                `<b>Day 499.</b>
+                 I've grown accustomed to the taste of limescale.
+                 This strict diet has given me the body I've always craved. `
+            ,
+            insta2:
+                `But in a cruel twist of fate, I can no longer reap the likes on insta.`
+            ,
+            chess:
+                `<b>Day 504.</b> I've gotten quite into playing with myself.`
+            ,
+            chess2:
+                `You know what they say: <br> "In space, you're your own worst enemy." `
+            ,
+            clapclap:
+                `Every Thursday at 8pm, I ceremonially clap and bang pots & pans. <br>
+                No one knows the origin of this tradition.`
+            ,
+            clapecho: 
+                `The echoes ringing through the ship's vast hull allow me to pretend, <br> for a minute, <br> that others are clapping along with me.`
+            ,
+            quiz:
+                `I've taken to setting pub quizzes for myself.`
+            ,
+            quiz2:
+                `Of course, to preserve legitimacy, 
+                I wait a year before actually taking it. 
+                There's nobody to swap sheets with, 
+                so I wait another year before marking my answers. `
+            ,
+            onewiththeship:
+                `<b>Day 991.</b> I have become one with the ship. <br> <br>
+                Like the majestic hull, I am empty. <br>
+                Like the toilet, I am white. <br>
+                Like the skirting, I am board. <br>`
+            ,
+            barratt:
+                `<b>Day 1021.</b> I just found out that technically, it's called 'The Netherlands and Barratt'. `
+            ,
+            thelight:
+                `<b>Day 1510.</b> I HAVE FINALLY REACHED THE LIGHT.`
+            ,
+            thelight2:
+                `To replace the bulb in the hallway. Yes! Ive been stretching for 15 weeks to get my little hands up that high. Unfortunately, I pulled one of my deteriorating muscles in the process.`
+            ,
+            thelight3: 
+                `Never regret thy fall, <br>
+                O Icarus of the fearless flight. <br>
+                For the greatest tragedy of them all, <br>
+                Is never to feel the burning light.`
+            ,
+            end: 
+                `I'm just a mere pilot. <br>
+                Unfortunately, so is this version of the tale. <br> <br>
+                I'd ask you to give me time, but I've got plenty of that already, thanks. <br> <br>
+                Over and out. `
+            ,
+            showerpodcast: 
+                `I leave the shower running as a sort of... <br>
+                <i>podcast</i>`
+            ,
+            messenger:
+                `The text link home is a comfort, <br>                
+                but the five year delay is impractical. `
+
+        } ;
+
+//
+    // ======= GSAP Animation Scripts 
+        // init & helper fns 
+            gsap.registerPlugin(ScrollTrigger , TextPlugin);
+            var width = document.body.clientWidth;
+            // Helper function for removing elements. 
+            function removeElement(element) 
+                {
+                    if (typeof(element) === "string") {
+                    element = document.querySelector(element);
+                    }
+                    return function() {
+                    element.parentNode.removeChild(element);
+                    };
+                }
+
+        // text panel typewriter loop 
+            const textpanels = gsap.utils.toArray(".paneltext");
+            textpanels.forEach( t => 
+            {
+                gsap.to(t,
+                {
+                    duration: 10,
+                    text: 
+                    {
+                        value: textarray[t.id],
+                        speed: 0.8,
+                    },
+                    ease:"none",
+                    scrollTrigger: {
+                        trigger: t,
+                        preventOverlaps: true
+                    }
+                });
+            });
+
+        // Custom(#intro)        Intro scrolling ship anim.
+
+            
+            gsap.to("#introtext", 
+                    {
+                        duration: 3, 
+                        delay: 2,
+                        text: "Starship"
+                    } );
+            
+
+            var introtl = gsap.timeline({repeat:0});
+            introtl.to("#introdiv", {x: 0.6*width, duration: 20, ease:"none"}) 
+            .to("#introdiv", {opacity:0, duration: 1})
+            .call(removeElement("#introdiv"));
+
+
+
+        // Custom(#messenger)    appearing messenger boxes 
+            var messtl = gsap.timeline(
+                                    {
+                                        
+                                        scrollTrigger: 
+                                        {
+                                            trigger:"#messengerdiv",
+                                            pin:true,
+                                            start: "center center",
+                                            end:"+=200%",
+                                            scrub:0.2,
+                                            once:true
+                                        }
+                                    });
+            messtl.from("#mb1", {opacity:0, scale:0.4, x:-100, duration:0.2, ease:"power3"})
+                    .from("#mb2", {opacity:0, scale:0.4, x:-100, duration:0.2, delay:0.5, ease:"power3" } )
+                    .from("#mb3", {opacity:0, scale:0.4, x:-100, duration:0.2, delay:1, ease:"power3"})
+                    .addDelay(3);                     
+//
+
+
+
+
+// #endregion 
+</script>
+</body>
+</html>
+ 
