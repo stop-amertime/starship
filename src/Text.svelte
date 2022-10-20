@@ -11,7 +11,7 @@ export let style = '';
 	height: 8em;
 	position: relative;
 	text-align: center;
-	width: min(90%, 25em);
+	width: min(80%, 25em);
 	margin-left: auto;
 	margin-right: auto;
 }

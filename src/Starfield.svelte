@@ -3,12 +3,12 @@ import jq from 'jquery';
 
 var sf = {
 	parralax: true,
-	parralaxSens: 0.03,
+	parralaxSens: 0.01,
 	starDensity: 0.6,
 	canvas: null,
 	container: null,
 	direction: 'right', // left || right
-	dx: 0.1, // horizontal velocity
+	dx: 0.05, // horizontal velocity
 	cw: null, // canvasWidth
 	ch: null, // canvasHeight
 	ctx: null, // context
@@ -222,13 +222,23 @@ var waitForFinalEvent = (function () {
 })();
 </script>
 
+<img src="starbg.jpg" alt="Starfield" />
 <div class="canvas-container fixed-top js-container" id="starfield">
 	<canvas class="100 canvas-container__canvas js-canvas">Starfield Canvas</canvas>
 </div>
 
 <style>
+img {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	filter: grayscale(0.9) brightness(1) contrast(1.4);
+	z-index: -30;
+	object-fit: cover;
+}
+
 .canvas-container {
-	background: black;
+	background: rgba(0, 0, 0, 0);
 	height: 120vh;
 	width: 100%;
 	z-index: -20;

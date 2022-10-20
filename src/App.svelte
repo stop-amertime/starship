@@ -254,7 +254,7 @@ onMount(() => {
 
 #scrollreminder {
 	position: absolute;
-	width: 100vh;
+	width: 100vw;
 	height: 50vh;
 	opacity: 0;
 }
@@ -277,7 +277,7 @@ onMount(() => {
 	height: 8em;
 	position: relative;
 	text-align: center;
-	width: min(90%, 28em);
+	width: min(80%, 28em);
 	margin-left: auto;
 	margin-right: auto;
 }

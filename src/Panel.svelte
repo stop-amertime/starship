@@ -10,7 +10,7 @@ let url = `image/${img}.png`;
 
 .panel {
 	display: block;
-	width: min(90%, 500px);
+	width: min(80%, 500px);
 	margin: auto;
 	height: auto;
 	object-fit: contain;
