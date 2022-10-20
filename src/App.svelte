@@ -1,24 +1,23 @@
 <script lang="ts">
 import Text from './Text.svelte';
-
 import Spacer from './Spacer.svelte';
 import Panel from './Panel.svelte';
-
 import Starfield from './Starfield.svelte';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
-import textarray from './lib/text.js';
 import { onMount } from 'svelte';
 
+import textarray from './lib/text.js';
+
+let low = true;
 let bodysize = [document.body.clientWidth, document.body.clientHeight];
 window.onresize = () => (bodysize = [document.body.clientWidth, document.body.clientHeight]);
 
-let low = true;
-
 onMount(() => {
-	// ======= GSAP Animation Scripts
-	// init & helper fns
+	// ======= GSAP Animations
+	// Initialise Plugin
 	gsap.registerPlugin(ScrollTrigger, TextPlugin);
 	var width = document.body.clientWidth;
 
@@ -31,7 +30,7 @@ onMount(() => {
 		};
 	}
 
-	// text panel typewriter loop
+	// Typewriter effect on panel text.
 	const textpanels = gsap.utils.toArray('.paneltext') as HTMLElement[];
 
 	for (let t of textpanels) {
@@ -49,7 +48,7 @@ onMount(() => {
 		});
 	}
 
-	// Custom(#intro)        Intro scrolling ship anim.
+	// Custom(#intro)        Intro ship animation
 	gsap.to('#introtext', {
 		duration: 4,
 		delay: 2,
@@ -63,7 +62,7 @@ onMount(() => {
 		.to('#scrollreminder', { opacity: 1, duration: 2 })
 		.call(removeElement('#introdiv'));
 
-	// Custom(#messenger)    appearing messenger boxes
+	// Custom(#messenger)    Messenger boxes animation
 	var messengerTimeline = gsap.timeline({
 		scrollTrigger: {
 			trigger: '#messengerdiv',
