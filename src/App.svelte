@@ -290,5 +290,14 @@ onMount(() => {
 	filter: drop-shadow(5px 10px 5px #222222);
 }
 
+#messengerdiv {
+	display: block;
+	width: min(80%, 400px);
+	margin: auto;
+	height: auto;
+	object-fit: contain;
+
+}
+
 /* #endregion */
 </style>
