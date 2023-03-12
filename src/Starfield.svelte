@@ -222,7 +222,7 @@ var waitForFinalEvent = (function () {
 })();
 </script>
 
-<img src="starbg.jpg" alt="Starfield" />
+<img class="stars-background" src="starbg.jpg" alt="Starfield" />
 <div class="canvas-container fixed-top js-container" id="starfield">
 	<canvas class="100 canvas-container__canvas js-canvas">Starfield Canvas</canvas>
 </div>
@@ -232,7 +232,7 @@ img {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	filter: grayscale(0.9) brightness(1) contrast(1.4);
+	filter: grayscale(0.9) brightness(0.5) contrast(1);
 	z-index: -30;
 	object-fit: cover;
 }

@@ -36,10 +36,7 @@ export default {
                 O Icarus of the fearless flight. <br>
                 For the greatest tragedy of them all, <br>
                 Is never to feel the burning light.`,
-	end: `I'm just a mere pilot. <br>
-                Unfortunately, so is this version of the tale. <br> <br>
-                I'd ask you to give me time, but I've got plenty of that already, thanks. <br> <br>
-                Over and out. `,
+	end: `I haven't found a way to end this yet. I'd say 'give me time', but I've got quite enough of that already.`,
 	showerpodcast: `I leave the shower running as a sort of... <br>
                 <i>podcast</i>`,
 	messenger: `The text link home is a comfort, <br>                
