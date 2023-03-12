@@ -1,5 +1,6 @@
 <script lang="ts">
 import jq from 'jquery';
+    import { fade } from 'svelte/transition';
 
 var sf = {
 	parralax: true,
@@ -222,8 +223,8 @@ var waitForFinalEvent = (function () {
 })();
 </script>
 
-<img class="stars-background" src="starbg.jpg" alt="Starfield" />
-<div class="canvas-container fixed-top js-container" id="starfield">
+<img transition:fade={{duration: 500}} class="stars-background" src="starbg.jpg" alt="Starfield" />
+<div transition:fade={{duration: 500}} class="canvas-container fixed-top js-container" id="starfield">
 	<canvas class="100 canvas-container__canvas js-canvas">Starfield Canvas</canvas>
 </div>
 
@@ -232,7 +233,7 @@ img {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	filter: grayscale(0.9) brightness(0.5) contrast(1);
+	filter: grayscale(0.9) brightness(0.9) contrast(1.2);
 	z-index: -30;
 	object-fit: cover;
 }
