@@ -1,6 +1,6 @@
 <script lang="ts">
 import jq from 'jquery';
-    import { fade } from 'svelte/transition';
+import { fade } from 'svelte/transition';
 
 var sf = {
 	parralax: true,
